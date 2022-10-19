@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'YS Text', Arial, Helvetica, 'Arial Unicode MS', sans-serif;
+    ;
+}
+
+:root {
+    --content-width: 800px;
+    --content-height: 500px;
+    --img-size: 20px
+}
+
+.body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.main {
+    width: 83%;
+    margin-left: auto;
+}
+
+.page {
+    width: var(--content-width);
+    height: var(--content-height);
+    margin: auto;
+}
+
+.border {
+    border: 2px solid red;
+}
+
+.form {
+    width: 100%
+}
+
+.form__input {
+    height: 2.5rem;
+    font-size: 1.3rem;
+    background-color: white;
+    border: 3px solid #fdde55;
+    border-radius: 10px 0 0 10px;
+    width: 85%;
+}
+
+.form__input::placeholder {
+    padding-left: 15px;
+    vertical-align: baseline;
+}
+
+.form__btn {
+    font-size: 1.3rem;
+    line-height: calc(1.3rem + 4px);
+    vertical-align: baseline;
+    height: calc(2.5rem + 6px);
+    background-color: #fdde55;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    width: 13%;
+    margin-left: -5px
+}
+
+.services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.service {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.service__logo {
+    width: var(--img-size);
+    border-radius: 50%;
+}
+
+.service__label {
+    line-height: var(--img-size);
+    margin-left: 5px;
+    font-size: 0.9em;
+
+}
+
+.service__link {
+    text-decoration: none;
+    color: rgb(76, 76, 184)
+}
+
+.content {
+    margin: 30px 0;
+}
+
+.content__title {
+    font-weight: normal;
+    font-size: 1.8em;
+    margin-bottom: 8px;
+}
+
+.content__text {
+    font-size: 0.9em;
+}
+
+.content__link {
+    text-decoration: none;
+    color: rgb(76, 76, 184)
+}
+
+.header__logo {
+    display: inline-block;
+    width: 90%;
+    margin: auto auto auto 0;
+}
+
+.footer {
+    position: absolute;
+    top: calc(100% - 2rem);
+    left: calc(50% - var(--content-width) / 2);
+    margin-top: auto;
+}
+
+.footer__text {
+    color: gray
+}
+
+@media screen and (max-width: 1000px) {
+    :root {
+        --content-width: 600px;
+    }
+
+    .form__input {
+        width: 80%;
+    }
+
+    .form__btn {
+        width: 18%;
+    }
+}
