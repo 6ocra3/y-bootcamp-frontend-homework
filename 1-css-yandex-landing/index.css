@@ -7,7 +7,7 @@
 
 :root {
     --content-width: 800px;
-    --content-height: 500px;
+    --content-height: 300px;
     --img-size: 20px
 }
 
@@ -47,11 +47,15 @@
     background-color: white;
     border: 3px solid #fdde55;
     border-radius: 10px 0 0 10px;
-    width: 85%;
+    width: 80%;
+    padding-left: 15px;
+}
+
+.form__input:focus {
+    outline: 0;
 }
 
 .form__input::placeholder {
-    padding-left: 15px;
     vertical-align: baseline;
 }
 
@@ -126,17 +130,25 @@
     margin-top: auto;
 }
 
-.footer__text {
+.footer-links {
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links__link {
+    text-decoration: none;
     color: gray
 }
 
 @media screen and (max-width: 1000px) {
     :root {
         --content-width: 600px;
+        --content-height: 300px;
     }
 
     .form__input {
-        width: 80%;
+        width: 75%;
     }
 
     .form__btn {
