@@ -1,0 +1,21 @@
+.revCard {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.revCard__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.revCard__name,
+.revCard__mark {
+    margin: 0;
+}
+
+.revCard__review {
+    text-align: justify;
+}
