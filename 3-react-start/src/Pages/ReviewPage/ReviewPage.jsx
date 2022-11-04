@@ -14,7 +14,7 @@ export function ReviewPage({ book }) {
             </section>
             <section className={s.review_list}>
                 {book.reviews.map((review) =>
-                    <ReviewCard review={review} />)}
+                    <ReviewCard key={review.id} review={review} />)}
             </section>
 
         </main>
