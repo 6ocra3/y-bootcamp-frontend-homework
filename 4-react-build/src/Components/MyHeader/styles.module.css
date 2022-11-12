@@ -10,6 +10,9 @@
     justify-content: space-between;
 }
 
+.header__title_link {
+    text-decoration: none;
+}
 
 .header__title {
     margin: 0;

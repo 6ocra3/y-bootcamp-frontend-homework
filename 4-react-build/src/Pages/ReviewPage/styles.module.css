@@ -1,7 +1,12 @@
 .main_review {
     background-color: #E9E9E9;
     padding: 50px 40px 0 40px;
-    height: Calc(91vh - 51px);
+    height: calc(91vh - 51px);
+    overflow: auto;
+}
+
+.main_review::-webkit-scrollbar {
+    width: 0;
 }
 
 .book_info {
@@ -31,10 +36,6 @@
     margin-bottom: 0;
 }
 
-.review_list {
-    height: 100%;
-    overflow: auto;
-}
 
 .review_list::-webkit-scrollbar {
     width: 0;

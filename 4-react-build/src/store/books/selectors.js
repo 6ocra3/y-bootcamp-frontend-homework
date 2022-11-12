@@ -1,0 +1,1 @@
+export const getBook = (state, id) => state.books.entities[id]

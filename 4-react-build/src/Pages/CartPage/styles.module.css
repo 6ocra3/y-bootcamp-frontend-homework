@@ -1,0 +1,13 @@
+.cart {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+    padding: 50px 40px 0 40px;
+    height: Calc(91vh - 51px);
+    background-color: #E9E9E9;
+}
+
+.booklist {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
