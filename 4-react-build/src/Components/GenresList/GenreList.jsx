@@ -3,9 +3,7 @@ import { books } from "../../data"
 import s from "./styles.module.css"
 export function GenreList({ genres, activeGenre, setActiveGenre }) {
     useEffect(() => {
-
         setActiveGenre(genres[0])
-        console.log(genres[0])
     }, [])
     return (
         <>
