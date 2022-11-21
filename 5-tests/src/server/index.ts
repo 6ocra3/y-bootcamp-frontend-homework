@@ -1,6 +1,6 @@
 import express from 'express';
 import { router } from './routes';
-
+import 'localstorage-polyfill'
 const port = Number(process.env.PORT) || 3000;
 const basename = '/hw/store';
 

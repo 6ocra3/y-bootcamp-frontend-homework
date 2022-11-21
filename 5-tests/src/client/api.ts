@@ -3,7 +3,7 @@ import { CartState, CheckoutFormData, CheckoutResponse, Product, ProductShortInf
 
 export class ExampleApi {
     constructor(private readonly basename: string) {
-
+        this.basename = basename
     }
 
     async getProducts() {

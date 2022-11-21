@@ -11,6 +11,7 @@ const config: webpack.Configuration = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         publicPath: '/hw/store',
+        clean: true
     },
     plugins: [
         new HtmlWebpackPlugin({

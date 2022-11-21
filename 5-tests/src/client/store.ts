@@ -72,6 +72,7 @@ function createRootReducer(state: Partial<ApplicationState>) {
                 draft.latestOrderId = undefined;
                 break
             case 'CLEAR_CART':
+                console.log(112343)
                 draft.cart = {};
                 draft.latestOrderId = undefined;
                 break;

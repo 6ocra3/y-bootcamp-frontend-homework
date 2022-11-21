@@ -13,6 +13,7 @@ export interface ProductDetailsProps {
 }
 
 export const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
+
     const dispatch = useDispatch();
 
     const onClick = useCallback(() => {
