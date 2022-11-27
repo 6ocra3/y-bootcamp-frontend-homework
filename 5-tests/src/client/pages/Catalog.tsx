@@ -29,10 +29,10 @@ export const Catalog: React.FC = () => {
             <Helmet title="Catalog" />
             <div className="row">
                 <div className="col">
-                    <h1>Catalog</h1>
+                    <h1 data-testid="page-header" >Catalog</h1>
                 </div>
             </div>
-            <div className="row">
+            <div className="row" data-testid="items-div">
                 {items}
             </div>
         </div>

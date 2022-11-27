@@ -16,7 +16,6 @@ export const Cart: React.FC = () => {
     const latestOrderId = useSelector((s: ApplicationState) => s.latestOrderId);
 
     const onClear = useCallback(() => {
-        console.log("клик")
         dispatch(clearCart());
     }, [dispatch]);
 
@@ -92,10 +91,10 @@ export const Cart: React.FC = () => {
 
     const alertClass = process.env.BUG_ID !== '8' ? 'alert-success' : 'alert-danger';
 
-    const orderInfo = cartIsEmpty && latestOrderId ? (
+    const orderInfo = cartIsEmpty ? (
         <div className="row my-2">
             <div className="col-12 col-sm-8 col-md-6">
-                <div className={bem('SuccessMessage', ['alert', alertClass])}>
+                <div data-testid="succes-msg" className={bem('SuccessMessage', ['alert', alertClass])}>
                     <h4 className="alert-heading">Well done!</h4>
                     <p>Order #<strong className={bem('Number')}>{latestOrderId}</strong> has been successfully completed.</p>
                     <hr />

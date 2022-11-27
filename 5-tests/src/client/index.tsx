@@ -8,6 +8,7 @@ import { ExampleApi, CartApi } from './api';
 import { initStore } from './store';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import { ProductShortInfo } from '../common/types';
 const basename = '/hw/store';
 
 const api = new ExampleApi(basename);

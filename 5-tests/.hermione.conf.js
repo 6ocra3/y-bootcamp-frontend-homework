@@ -1,5 +1,5 @@
 module.exports = {
-    baseUrl: "http://localhost:3000/hw/store",
+    baseUrl: "",
     browsers: {
         chrome: {
             automationProtocol: "devtools",

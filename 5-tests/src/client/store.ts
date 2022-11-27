@@ -72,7 +72,6 @@ function createRootReducer(state: Partial<ApplicationState>) {
                 draft.latestOrderId = undefined;
                 break
             case 'CLEAR_CART':
-                console.log(112343)
                 draft.cart = {};
                 draft.latestOrderId = undefined;
                 break;
@@ -91,6 +90,7 @@ function createRootReducer(state: Partial<ApplicationState>) {
 // epics
 const productsLoadEpic: ExampleEpic = (action$, store$, { api }) => action$.pipe(
     ofType('PRODUCTS_LOAD'),
+
     mergeMap((a: ReturnType<typeof productsLoad>) => {
         return from(api.getProducts()).pipe(
             map(products => productsLoaded(products.data)),
@@ -139,7 +139,7 @@ export const rootEpic = combineEpics(
 
 export function initStore(api: ExampleApi, cart: CartApi) {
     const rootReducer = createRootReducer({
-        cart: cart.getState()
+        cart: cart.getState(),
     });
 
     const epicMiddleware = createEpicMiddleware<Action, Action, ApplicationState, EpicDeps>({

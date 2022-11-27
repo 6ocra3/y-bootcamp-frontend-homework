@@ -39,7 +39,6 @@ export const Form: React.FC<FormProps> = ({ onSubmit }) => {
 
     const onClick = useCallback(() => {
         setSubmitted(true);
-
         if (nameIsValid && phoneIsValid && addressIsValid) {
             setSent(true);
             onSubmit({
@@ -69,7 +68,7 @@ export const Form: React.FC<FormProps> = ({ onSubmit }) => {
                     id="f-phone"
                     type="text"
                     disabled={sent}
-                    className={bem("Field", { type: 'phone' }, [getControlClass(phoneIsValid, submitted)] )}
+                    className={bem("Field", { type: 'phone' }, [getControlClass(phoneIsValid, submitted)])}
                     onChange={onChangePhone} />
                 <div className="invalid-feedback">Please provide a valid phone</div>
             </div>
@@ -79,12 +78,12 @@ export const Form: React.FC<FormProps> = ({ onSubmit }) => {
                     id="f-address"
                     disabled={sent}
                     rows={3}
-                    className={bem("Field", { type: 'address' }, [getControlClass(addressIsValid, submitted)] )}
+                    className={bem("Field", { type: 'address' }, [getControlClass(addressIsValid, submitted)])}
                     onChange={onChangeAddress}></textarea>
                 <div className="invalid-feedback">Please provide a valid address</div>
             </div>
 
-            <button className={bem('Submit', ['btn', 'btn-primary'])} disabled={sent} onClick={onClick}>Checkout</button>
+            <button id="sbm-btn" className={bem('Submit', ['btn', 'btn-primary'])} disabled={sent} onClick={onClick}>Checkout</button>
         </div>
     );
 }
